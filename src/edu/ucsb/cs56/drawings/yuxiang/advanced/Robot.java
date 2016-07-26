@@ -14,7 +14,7 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
    rotated, scaled, etc.
       
    @author Yuxiang Wang 
-   @version for CS56, W16, UCSB
+   @version for CS56, M16, UCSB
    
 */
 public class Robot extends GeneralPathWrapper implements Shape
@@ -22,10 +22,10 @@ public class Robot extends GeneralPathWrapper implements Shape
     /**
        Constructor
        
-       @param x x coord of lower left corner of house
-       @param y y coord of lower left corner of house
-       @param width width of the house
-       @param height of house (including first story and second story)
+       @param x x coord of lower left corner of Robot
+       @param y y coord of lower left corner of Robot
+       @param width width of the Robot body
+       @param height of robot body and head
     */
     public Robot(double x, double y, double width, double height)
     {
@@ -53,8 +53,7 @@ public class Robot extends GeneralPathWrapper implements Shape
             new Rectangle2D.Double(headX, y,
 				   headWidth, headHeight);
 	
-        // make the roof.   Remember that y goes DOWN the page,
-        // so we ADD to y to get a "lower" value on the screen
+        // make the arms and legs.
         
         Line2D.Double leftArm = 
             new Line2D.Double (x,               y + 1.1 * headHeight,
@@ -73,7 +72,7 @@ public class Robot extends GeneralPathWrapper implements Shape
                                x + 1.15 * width, y + height + 0.5 * bodyHeight);
 
 	
-        // put the whole house together
+        // put the whole robot together
 	
         GeneralPath wholeRobot = this.get();
         wholeRobot.append(body, false);

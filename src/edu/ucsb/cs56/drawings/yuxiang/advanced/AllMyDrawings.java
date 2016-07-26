@@ -12,13 +12,13 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
- * @version for UCSB CS56, W16 
+ * @author Phill Conrad, Yuxiang Wang 
+ * @version for UCSB CS56, M16 
  */
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a few robots 
      */
     
     public static void drawPicture1(Graphics2D g2) {
@@ -26,14 +26,14 @@ public class AllMyDrawings
 	Robot h1 = new Robot(100,250,50,75);
 	g2.setColor(Color.CYAN); g2.draw(h1);
 	
-	// Make a black house that's half the size, 
+	// Make a blue robot that's half the size, 
 	// and moved over 150 pixels in x direction
 	
 	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
+	g2.setColor(Color.BLUE); g2.draw(h2);
 	
-	// Here's a house that's 4x as big (2x the original)
+	// Here's a robot that's 4x as big (2x the original)
 	// and moved over 150 more pixels to right.
 	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
 	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
@@ -50,7 +50,7 @@ public class AllMyDrawings
 	g2.setColor(new Color(0x002FA7)); 
 	g2.draw(h2); 
 	
-	// Draw two houses with Windows
+	// Draw two robots with antennas
 	
 	RobotWithAntenna hw1 = new RobotWithAntenna(50,350,40,75);
 	RobotWithAntenna hw2 = new RobotWithAntenna(200,75,125,100);

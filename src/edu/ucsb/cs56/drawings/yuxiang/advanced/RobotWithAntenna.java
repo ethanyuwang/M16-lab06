@@ -7,17 +7,17 @@ import java.awt.geom.Line2D;
    A robot with antennas
       
    @author Yuxiang Wang 
-   @version for CS56, W16, UCSB
+   @version for CS56, M16, UCSB
    
 */
 public class RobotWithAntenna extends Robot implements Shape
 {
     /**
-     * Constructor for objects of class CoffeeCup
+     * Constructor for objects of class RobotWithAntenna
      */
     public RobotWithAntenna(double x, double y, double width, double height)
     {
-	// construct the basic house shell
+	// construct the basic robot shell
 	super(x,y,width,height);
 	
 	double headX = x + width/4.0;
